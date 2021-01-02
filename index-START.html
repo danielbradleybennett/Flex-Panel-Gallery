@@ -81,7 +81,6 @@
       margin: 0;
       width: 100%;
       transition: transform 0.5s;
-      border: 1px solid red;
       flex: 1 0 auto;
       justify-content: center;
       align-items: center;
@@ -154,10 +153,12 @@
     const panels = document.querySelectorAll('.panel');
 
     function toggleOpen() {
+      console.log('Hello');
       this.classList.toggle('open');
     }
 
     function toggleActive(e) {
+      console.log(e.propertyName);
       if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active');
       }
